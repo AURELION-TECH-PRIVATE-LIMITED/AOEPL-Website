@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en" data-mode="multi" data-contact="contact.html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1C1511">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"GeneralContractor","name":"Art of Engineering OPC Pvt Ltd","description":"Home construction, interior fit-out, renovation, drawings and estimates.","areaServed":"Odisha, India","telephone":"+919040800314","email":"mail.aoepl@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Qr No. M-53, Phase 1, Chhend","addressLocality":"Rourkela","addressRegion":"Odisha","addressCountry":"IN"}}
+</script>
+<script>
+(function(){
+  var r=document.documentElement;
+  r.classList.add('js');
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add('anim');}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+<title>Art of Engineering | Construction and interior fit-out, Rourkela</title>
+<meta name="description" content="Art of Engineering builds homes and fits out interiors in Rourkela, Odisha. Watch a house go from drawing to handover.">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Art of Engineering</a>
+  <nav aria-label="Main">
+    <a data-nav="home" aria-current="page" href="index.html">Home</a>
+    <a data-nav="services" href="services.html">Services</a>
+    <a data-nav="how" href="how-we-work.html">How we work</a>
+    <a data-nav="estimate" href="estimate.html">Cost estimator</a>
+    <a data-nav="contact" href="contact.html">Contact</a>
+    <a class="btn" href="estimate.html">Get estimate</a>
+  </nav>
+  <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav">Menu</button>
+</header>
+<div id="mnav" role="dialog" aria-label="Site menu">
+  <a data-nav="home" aria-current="page" href="index.html">Home</a>
+  <a data-nav="services" href="services.html">Services</a>
+  <a data-nav="how" href="how-we-work.html">How we work</a>
+  <a data-nav="estimate" href="estimate.html">Cost estimator</a>
+  <a data-nav="contact" href="contact.html">Contact</a>
+</div>
+<a class="fab" id="fab" href="contact.html" aria-label="Message us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+  <span>WhatsApp</span>
+</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="p-blk" width="16" height="8" patternUnits="userSpaceOnUse"><path d="M0 8H16M8 0V8" stroke="#1C1511" stroke-width=".7" opacity=".55" fill="none"/></pattern>
+    <pattern id="p-brh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V7" stroke="#8A6424" stroke-width="1.6"/></pattern>
+    <pattern id="p-conc" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r=".7" fill="#1C1511" opacity=".6"/><circle cx="4.5" cy="4.5" r=".6" fill="#1C1511" opacity=".5"/></pattern>
+    <pattern id="p-grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0V30H0" fill="none" stroke="#1C1511" stroke-width=".6" opacity=".45"/></pattern>
+  </defs>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></symbol>
+</svg>
+<main class="">
+<section class="build" id="build" aria-label="From drawing to handover">
+  <div class="stage" id="stage">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="hud" aria-hidden="true"><span>G+1 residence</span><b id="hudPhase">Blueprint</b></div>
+
+    <div class="copy">
+      <div class="panels">
+        <article class="panel" data-i="0">
+          <h1>Built to the drawing.</h1>
+          <p>Art of Engineering builds homes and fits out interiors in Rourkela, Odisha. Engineers plan every stage, then check the work against the drawing.</p>
+          <div class="cta">
+            <a class="btn" href="contact.html">Request a site visit</a>
+            <a class="btn ghost" href="services.html">See the scope of work</a>
+          </div>
+          <p class="hint">Keep scrolling and watch the house get built.</p>
+        </article>
+        <article class="panel" data-i="1">
+          <p class="ph">Phase 1 of 6</p>
+          <h2>Foundation</h2>
+          <p>Grid, levels and soil conditions are checked before a single footing is cast. Getting this right keeps every later stage square.</p>
+        </article>
+        <article class="panel" data-i="2">
+          <p class="ph">Phase 2 of 6</p>
+          <h2>Structure</h2>
+          <p>Columns, beams and slabs go up to the structural drawing. Reinforcement is inspected before each pour, not after.</p>
+        </article>
+        <article class="panel" data-i="3">
+          <p class="ph">Phase 3 of 6</p>
+          <h2>Masonry</h2>
+          <p>Walls rise to line and level, so doors, windows and finishes fit cleanly and nothing needs patching later.</p>
+        </article>
+        <article class="panel" data-i="4">
+          <p class="ph">Phase 4 of 6</p>
+          <h2>Openings and services</h2>
+          <p>Window frames, electrical conduits and plumbing lines are fixed before finishing starts, so no finished wall gets cut open.</p>
+        </article>
+        <article class="panel" data-i="5">
+          <p class="ph">Phase 5 of 6</p>
+          <h2>Interiors</h2>
+          <p>Ceilings, woodwork, lighting and paint are done by the team that built the shell, with one engineer answerable for the whole job.</p>
+        </article>
+        <article class="panel" data-i="6">
+          <p class="ph">Phase 6 of 6</p>
+          <h2>Handover</h2>
+          <p>A joint walkthrough, a snag list closed out, and the final drawings and documents handed to you.</p>
+        </article>
+      </div>
+      <ol class="rail" id="rail" aria-label="Build phases">
+        <li><button type="button" data-go="1"><span class="tick"><i></i></span><span class="nm">Foundation</span></button></li>
+        <li><button type="button" data-go="2"><span class="tick"><i></i></span><span class="nm">Structure</span></button></li>
+        <li><button type="button" data-go="3"><span class="tick"><i></i></span><span class="nm">Masonry</span></button></li>
+        <li><button type="button" data-go="4"><span class="tick"><i></i></span><span class="nm">Openings</span></button></li>
+        <li><button type="button" data-go="5"><span class="tick"><i></i></span><span class="nm">Interiors</span></button></li>
+        <li><button type="button" data-go="6"><span class="tick"><i></i></span><span class="nm">Handover</span></button></li>
+      </ol>
+    </div>
+
+    <!-- 2D drawing: shown only if WebGL is unavailable -->
+    <div class="plan">
+<svg id="house" viewBox="0 0 800 600" role="img" aria-label="Elevation drawing of a two-storey house being built in six phases: foundation, structure, masonry, openings and services, interiors, and handover.">
+  <defs>
+    <pattern id="lat" width="26" height="26" patternUnits="userSpaceOnUse">
+      <rect width="26" height="26" fill="#8E4327"/>
+      <path d="M0 0H26M0 13H26M13 0V13M0 13V26" stroke="#6A2D18" stroke-width="1"/>
+    </pattern>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#B4AEA3"/>
+      <path d="M0 0V7" stroke="#6F6A61" stroke-width="1.4"/>
+    </pattern>
+    <pattern id="soil" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="4" r="1" fill="#E6E0D3" opacity=".45"/>
+      <circle cx="11" cy="9" r="1.2" fill="#E6E0D3" opacity=".35"/>
+      <circle cx="6" cy="14" r=".8" fill="#E6E0D3" opacity=".4"/>
+    </pattern>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6DC94"/>
+      <stop offset="1" stop-color="#D9A94F"/>
+    </linearGradient>
+    <radialGradient id="sunG">
+      <stop offset="0" stop-color="#D2A85A" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#D2A85A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g data-k="6">
+    <g data-m="fade">
+      <ellipse cx="420" cy="300" rx="380" ry="230" fill="url(#sunG)" opacity=".45"/>
+      <circle cx="722" cy="92" r="92" fill="url(#sunG)"/>
+      <circle cx="722" cy="92" r="24" fill="#D2A85A"/>
+    </g>
+  </g>
+  <g class="bp">
+    <rect class="fd" style="--i:0" x="40" y="430" width="720" height="70" fill="url(#soil)"/>
+    <line class="d g" style="--i:0" pathLength="1" x1="40" y1="430" x2="760" y2="430"/>
+    <line class="d ax" style="--i:1" pathLength="1" x1="180" y1="97" x2="180" y2="560"/>
+    <line class="d ax" style="--i:2" pathLength="1" x1="340" y1="97" x2="340" y2="560"/>
+    <line class="d ax" style="--i:3" pathLength="1" x1="500" y1="97" x2="500" y2="560"/>
+    <line class="d ax" style="--i:4" pathLength="1" x1="660" y1="97" x2="660" y2="560"/>
+    <g class="bub fd" style="--i:5">
+      <circle cx="180" cy="84" r="13"/><text x="180" y="84">A</text>
+      <circle cx="340" cy="84" r="13"/><text x="340" y="84">B</text>
+      <circle cx="500" cy="84" r="13"/><text x="500" y="84">C</text>
+      <circle cx="660" cy="84" r="13"/><text x="660" y="84">D</text>
+    </g>
+    <g class="fd" style="--i:6">
+      <path class="lv" d="M44 300H140M110 300l-6-9h12z"/>
+      <path class="lv" d="M44 170H140M110 170l-6-9h12z"/>
+      <path class="lv" d="M110 430l-6-9h12z"/>
+      <text x="44" y="422">±0.000 GL</text>
+      <text x="44" y="292">+3.300 FFL</text>
+      <text x="44" y="162">+6.600 ROOF</text>
+    </g>
+    <path class="d" style="--i:7" pathLength="1" d="M180 548H660M175 557L185 539M335 557L345 539M495 557L505 539M655 557L665 539"/>
+    <path class="d" style="--i:8" pathLength="1" d="M180 578H660M175 587L185 569M655 587L665 569"/>
+    <g class="fd" style="--i:8">
+      <text x="260" y="541" text-anchor="middle">4,000</text>
+      <text x="420" y="541" text-anchor="middle">4,000</text>
+      <text x="580" y="541" text-anchor="middle">4,000</text>
+      <text x="420" y="571" text-anchor="middle">12,000</text>
+    </g>
+  </g>
+  <g data-k="1">
+    <rect data-m="both" pathLength="1" class="s f-hatch" x="148" y="470" width="64" height="14"/>
+    <rect data-m="both" pathLength="1" class="s f-hatch" x="308" y="470" width="64" height="14"/>
+    <rect data-m="both" pathLength="1" class="s f-hatch" x="468" y="470" width="64" height="14"/>
+    <rect data-m="both" pathLength="1" class="s f-hatch" x="628" y="470" width="64" height="14"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="171" y="430" width="18" height="40"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="331" y="430" width="18" height="40"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="491" y="430" width="18" height="40"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="651" y="430" width="18" height="40"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="172" y="422" width="496" height="8"/>
+  </g>
+  <g data-k="2">
+    <rect data-m="both" pathLength="1" class="s f-conc" x="172" y="176" width="16" height="246"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="332" y="176" width="16" height="246"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="492" y="176" width="16" height="246"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="652" y="176" width="16" height="246"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="140" y="292" width="560" height="14"/>
+    <rect data-m="both" pathLength="1" class="s f-conc" x="140" y="162" width="560" height="14"/>
+  </g>
+  <g data-k="3">
+    <rect data-m="fade" class="f-lat" x="188" y="306" width="144" height="116"/>
+    <rect data-m="fade" class="f-plas" x="348" y="306" width="144" height="116"/>
+    <rect data-m="fade" class="f-lat" x="508" y="306" width="144" height="116"/>
+    <rect data-m="fade" class="f-plas" x="188" y="176" width="144" height="116"/>
+    <rect data-m="fade" class="f-lat" x="348" y="176" width="144" height="116"/>
+    <rect data-m="fade" class="f-plas" x="508" y="176" width="144" height="116"/>
+    <rect data-m="fade" class="f-par" x="140" y="146" width="560" height="16"/>
+  </g>
+  <g data-k="4">
+    <rect data-m="both" pathLength="1" class="s f-glass" x="208" y="336" width="104" height="66"/>
+    <rect data-m="both" pathLength="1" class="s f-glass" x="528" y="336" width="104" height="66"/>
+    <rect data-m="both" pathLength="1" class="s f-glass" x="384" y="334" width="72" height="88"/>
+    <rect data-m="both" pathLength="1" class="s f-glass" x="208" y="204" width="104" height="66"/>
+    <rect data-m="both" pathLength="1" class="s f-glass" x="368" y="204" width="104" height="66"/>
+    <rect data-m="both" pathLength="1" class="s f-glass" x="528" y="204" width="104" height="88"/>
+    <path data-m="draw" pathLength="1" class="p" d="M260 336V402M580 336V402M260 204V270M420 204V270M580 204V292"/>
+    <path data-m="draw" pathLength="1" class="p" d="M516 264H644M516 264V292M532 264V292M548 264V292M564 264V292M580 264V292M596 264V292M612 264V292M628 264V292M644 264V292"/>
+    <rect data-m="both" pathLength="1" class="s f-par" x="676" y="176" width="6" height="246"/>
+  </g>
+  <g data-k="5">
+    <g data-m="fade">
+      <rect class="f-glow" x="208" y="336" width="104" height="66"/>
+      <rect class="f-glow" x="528" y="336" width="104" height="66"/>
+      <rect class="f-glow" x="208" y="204" width="104" height="66"/>
+      <rect class="f-glow" x="368" y="204" width="104" height="66"/>
+      <rect class="f-glow" x="528" y="204" width="104" height="58"/>
+      <path class="p dark" d="M260 336V402M580 336V402M260 204V270M420 204V270M580 204V262"/>
+      <path class="p dark" d="M234 336V350M606 336V350M234 204V218M394 204V218"/>
+      <circle cx="234" cy="355" r="5" fill="#1C1511"/>
+      <circle cx="606" cy="355" r="5" fill="#1C1511"/>
+      <circle cx="234" cy="223" r="5" fill="#1C1511"/>
+      <circle cx="394" cy="223" r="5" fill="#1C1511"/>
+    </g>
+    <g data-m="fade">
+      <rect class="f-sal" x="390" y="340" width="60" height="82"/>
+      <path d="M400 340V422M410 340V422M420 340V422M430 340V422M440 340V422" stroke="#4A3019" stroke-width="1.2" fill="none"/>
+      <circle cx="444" cy="384" r="2.5" fill="#D2A85A"/>
+      <rect class="f-sal" x="352" y="410" width="24" height="12"/>
+      <circle cx="364" cy="401" r="11" fill="#6B7F4F"/>
+      <rect class="f-sal" x="464" y="410" width="24" height="12"/>
+      <circle cx="476" cy="401" r="11" fill="#6B7F4F"/>
+    </g>
+  </g>
+  <g data-k="6">
+    <g data-m="fade">
+      <rect x="466" y="346" width="20" height="12" fill="#D2A85A"/>
+    </g>
+  </g>
+</svg>
+    </div>
+  </div>
+</section>
+<section class="fs st brand-stmt" id="brand">
+  <div class="wrap">
+    <h2>ART OF ENGINEERING PVT LTD</h2>
+    <p>From design to reality, in one place.</p>
+    <p class="about">We&rsquo;re proud to serve Odisha with reliable, high-quality construction services. From custom homes to commercial builds, our local expertise ensures every project is done right. We build with integrity, craftsmanship, and a commitment to your vision.</p>
+    <p class="mlab">Who's behind the design &amp; Engineering</p>
+    <p class="about">We are a team of professional architects and engineers from NIT, Rourkela and OUTR, BBSR.</p>
+  </div>
+</section>
+<section class="fs st2" id="why">
+  <div class="wrap">
+    <div class="checks">
+      <div class="chk3"><h3><span class="cnum" data-to="10">0</span>+ years</h3><p>Structural engineering and construction experience across Odisha.</p></div>
+      <div class="chk3"><h3><span class="cnum" data-to="100000">0</span>+ sq&nbsp;ft</h3><p>Built and fitted out across residential and commercial projects.</p></div>
+      <div class="chk3"><img class="omap" src="media/Odisha1-alpha.png" alt="Map of Odisha" loading="lazy"><h3>Odisha-wide</h3><p>Projects taken up across the state, run by engineers based in Rourkela.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <a class="brand" href="index.html">Art of Engineering</a>
+        <p>Art of Engineering OPC Pvt Ltd</p>
+        <p>Room No. 311, TIIR Building, FTBI, NIT Rourkela</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="how-we-work.html">How every site is run</a></li>
+          <li><a href="estimate.html">Cost estimator</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="tel:+919040800314">+91 9040800314</a></li>
+          <li><a href="mailto:mail.aoepl@gmail.com">mail.aoepl@gmail.com</a></li>
+          <li>Mon to Sat, 9:00 AM to 7:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbase"><span>© 2026 Art of Engineering OPC Pvt Ltd</span><span>Construction, design and interior fit-out</span></div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" crossorigin="anonymous"></script>
+<script src="assets/hero.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
