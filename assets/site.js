@@ -194,21 +194,26 @@ function applyPrefill(){
 /* ---------- enquiry form ---------- */
 var form=$('enquiry'),status=$('status');
 function val(id){return $(id).value.trim();}
-function collect(){
+function fieldValues(){
   var need=[];
   if(!val('f-name')){need.push('your name');}
   if(!val('f-phone')){need.push('your phone number');}
   if(!val('f-scope')){need.push('a project scope');}
   if(!val('f-site')){need.push('the site location');}
   if(need.length){status.textContent='Please add '+need.join(', ')+' so we can reply.';return null;}
+  return {name:val('f-name'),phone:val('f-phone'),email:val('f-email'),scope:$('f-scope').value,area:val('f-area'),site:val('f-site'),notes:val('f-notes')};
+}
+function collect(){
+  var f=fieldValues();
+  if(!f){return null;}
   return 'Hello Art of Engineering, I would like an engineering proposal.\n'+
-    'Name: '+val('f-name')+'\n'+
-    'Phone: '+val('f-phone')+'\n'+
-    'Email: '+(val('f-email')||'-')+'\n'+
-    'Scope: '+$('f-scope').value+'\n'+
-    'Built-up area (sq ft): '+(val('f-area')||'-')+'\n'+
-    'Site location: '+val('f-site')+'\n'+
-    'Requirements: '+(val('f-notes')||'-');
+    'Name: '+f.name+'\n'+
+    'Phone: '+f.phone+'\n'+
+    'Email: '+(f.email||'-')+'\n'+
+    'Scope: '+f.scope+'\n'+
+    'Built-up area (sq ft): '+(f.area||'-')+'\n'+
+    'Site location: '+f.site+'\n'+
+    'Requirements: '+(f.notes||'-');
 }
 if(form){
   form.addEventListener('submit',function(ev){
@@ -219,10 +224,27 @@ if(form){
     status.textContent='Opening WhatsApp with your details.';
   });
   $('mailBtn').addEventListener('click',function(){
-    var msg=collect();
-    if(!msg){return;}
-    window.location.href='mailto:'+CONTACT.email+'?subject='+encodeURIComponent('Engineering proposal request')+'&body='+encodeURIComponent(msg);
-    status.textContent='Opening your email app with the details.';
+    var f=fieldValues();
+    if(!f){return;}
+    var btn=$('mailBtn');
+    function mailFallback(note){
+      window.location.href='mailto:'+CONTACT.email+'?subject='+encodeURIComponent('Engineering proposal request')+'&body='+encodeURIComponent(collect());
+      status.textContent=note||'Opening your email app with the details.';
+    }
+    btn.disabled=true;
+    status.textContent='Sending your enquiry…';
+    fetch('/.netlify/functions/send-enquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(f)})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(data){return {ok:r.ok,data:data};});})
+      .then(function(res){
+        if(res.ok&&res.data&&res.data.ok){
+          status.textContent='Thanks, your enquiry has been sent. We will get back to you soon.';
+          form.reset();
+        }else{
+          mailFallback((res.data&&res.data.error?res.data.error+' ':'')+'Opening your email app instead.');
+        }
+      })
+      .catch(function(){mailFallback();})
+      .then(function(){btn.disabled=false;});
   });
 }
 
