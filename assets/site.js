@@ -185,7 +185,7 @@ function params(){
 function applyPrefill(){
   var f=$('enquiry');if(!f){return;}
   var p=params();
-  if(p.scope!==undefined&&p.scope!==''){var i=parseInt(p.scope,10);if(!isNaN(i)&&$('f-scope')&&i>=0&&i<$('f-scope').options.length){$('f-scope').selectedIndex=i;}}
+  if(p.scope!==undefined&&p.scope!==''){var i=parseInt(p.scope,10);var sel=$('f-scope');if(!isNaN(i)&&sel&&i>=0&&i+1<sel.options.length){sel.selectedIndex=i+1;}}
   if(p.area&&$('f-area')){$('f-area').value=p.area;}
   if(p.notes&&$('f-notes')){$('f-notes').value=p.notes;}
   if(p.site&&$('f-site')){$('f-site').value=p.site;}
@@ -198,6 +198,7 @@ function collect(){
   var need=[];
   if(!val('f-name')){need.push('your name');}
   if(!val('f-phone')){need.push('your phone number');}
+  if(!val('f-scope')){need.push('a project scope');}
   if(!val('f-site')){need.push('the site location');}
   if(need.length){status.textContent='Please add '+need.join(', ')+' so we can reply.';return null;}
   return 'Hello Art of Engineering, I would like an engineering proposal.\n'+

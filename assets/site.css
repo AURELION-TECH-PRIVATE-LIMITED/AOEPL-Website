@@ -303,6 +303,8 @@ a{color:inherit}
 .hw .phero .lead{max-width:38rem}
 .est-pg .phero .head2{grid-template-columns:1fr;gap:clamp(16px,3vw,28px)}
 .est-pg .phero .lead{max-width:38rem}
+.contact-pg .phero .head2{grid-template-columns:1fr;gap:clamp(16px,3vw,28px)}
+.contact-pg .phero .lead{max-width:38rem}
 .hw .fs.st2{padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(40px,6vw,80px)}
 #scope{padding-bottom:clamp(40px,6vw,80px)}
 .phero h1{margin:0;font:800 clamp(56px,9.4vw,150px)/.9 var(--display);letter-spacing:-.012em}
