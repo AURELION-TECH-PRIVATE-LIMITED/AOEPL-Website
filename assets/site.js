@@ -271,6 +271,8 @@ function initEstimator(){
     }).join('');
     fls.forEach(function(g,i){g.classList.toggle('off',i>=f);});
     tween(total);
+    var mt=$('m-total');
+    if(mt){mt.textContent=inr(total);}
     firstPaint=false;
     var msg='Hello Art of Engineering, I calculated a construction estimate on your website.\n'+
       'Package: '+pk.name+' ('+inr(pk.rate)+'/sq ft)\n'+

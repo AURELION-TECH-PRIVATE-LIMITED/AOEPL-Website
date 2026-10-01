@@ -301,6 +301,8 @@ a{color:inherit}
 .pz-80 .fs.st2{padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(40px,6vw,80px)}
 .hw .phero .head2{grid-template-columns:1fr;gap:clamp(16px,3vw,28px)}
 .hw .phero .lead{max-width:38rem}
+.est-pg .phero .head2{grid-template-columns:1fr;gap:clamp(16px,3vw,28px)}
+.est-pg .phero .lead{max-width:38rem}
 .hw .fs.st2{padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(40px,6vw,80px)}
 #scope{padding-bottom:clamp(40px,6vw,80px)}
 .phero h1{margin:0;font:800 clamp(56px,9.4vw,150px)/.9 var(--display);letter-spacing:-.012em}
@@ -328,6 +330,7 @@ a{color:inherit}
 @media (min-width:861px){
   .pz-80{zoom:.8}.pz-75{zoom:.75}
   .pz-80 .wrap{max-width:1600px}.pz-75 .wrap{max-width:1700px}
+  #est{zoom:.92}
 }
 .phero.psm h1{font-size:clamp(36px,5vw,76px);line-height:.96}
 .svtrack{position:relative}
@@ -381,8 +384,9 @@ a{color:inherit}
 .status{min-height:1.6em;margin:14px 0 0;font-size:16px;color:var(--s-brass)}
 
 /* ============ cost estimator page ============ */
-.est{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:start}
+.est{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px)}
 .stp{border:1px solid var(--s-ink);background:rgba(255,255,255,.32);margin-bottom:28px}
+.stp:last-child{margin-bottom:0}
 .stp-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px clamp(20px,2.4vw,32px);border-bottom:1px solid var(--s-ink)}
 .stp-h h2{margin:0;font:800 clamp(28px,2.6vw,38px)/1 var(--display)}
 .stp-h span{font:600 15px/1 var(--display);letter-spacing:.05em;color:var(--s-brass);border:1px solid var(--s-brass);padding:5px 10px;white-space:nowrap}
@@ -435,7 +439,8 @@ a{color:inherit}
 .spec dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 28px;margin:16px 0 0}
 .spec dt{font:600 15px/1.2 var(--display);letter-spacing:.05em;color:var(--s-brass)}
 .spec dd{margin:3px 0 0;font-size:16px;line-height:1.45}
-.res{position:sticky;top:calc(96px + env(safe-area-inset-top,0px));background:var(--night);color:var(--plan)}
+.res{position:sticky;top:calc(96px + env(safe-area-inset-top,0px));scroll-margin-top:calc(96px + env(safe-area-inset-top,0px));background:var(--night);color:var(--plan)}
+.mtotal{display:none}
 .res-b{padding:clamp(22px,2.6vw,34px)}
 .rh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-bottom:18px;border-bottom:1px solid rgba(230,224,211,.2)}
 .rh small{display:block;font:600 16px/1 var(--display);letter-spacing:.05em;color:var(--brass);margin-bottom:8px}
@@ -495,4 +500,10 @@ a{color:inherit}
   .seg:nth-child(n+3){border-top:1px solid var(--s-ink)}
   .spec dl{grid-template-columns:1fr}
   .fcols{grid-template-columns:1fr}
+  .mtotal{display:flex;justify-content:space-between;align-items:center;gap:14px;position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--night);color:var(--plan);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(230,224,211,.2)}
+  .mtotal span{font:600 13px/1 var(--display);letter-spacing:.05em;color:rgba(230,224,211,.7)}
+  .mtotal output{font:800 22px/1 var(--display);color:var(--brass);white-space:nowrap}
+  .mtotal a{font:600 13px/1 var(--display);letter-spacing:.04em;color:var(--brass);text-decoration:underline;white-space:nowrap}
+  #est{padding-bottom:84px}
+  .est-pg .fab{bottom:calc(66px + env(safe-area-inset-bottom,0px) + 16px)}
 }

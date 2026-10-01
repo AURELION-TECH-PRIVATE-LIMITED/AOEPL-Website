@@ -55,7 +55,7 @@
   </defs>
   <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></symbol>
 </svg>
-<main class="pz pz-75">
+<main class="pz pz-75 est-pg">
 <section class="phero psm"><div class="bpd" aria-hidden="true"><svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" focusable="false"><rect class="dr ln" style="--i:1" pathLength="1" x="70" y="50" width="280" height="210"/><line class="dr ln tn" style="--i:2" pathLength="1" x1="90" y1="96" x2="330" y2="96"/><line class="dr ln tn" style="--i:3" pathLength="1" x1="90" y1="132" x2="330" y2="132"/><line class="dr ln tn" style="--i:4" pathLength="1" x1="90" y1="168" x2="330" y2="168"/><line class="dr ln tn" style="--i:5" pathLength="1" x1="90" y1="204" x2="330" y2="204"/><line class="dr ln br th" style="--i:6" pathLength="1" x1="70" y1="230" x2="350" y2="230"/><text class="tx fd " style="--i:7" x="90" y="252">Total</text><text class="tx fd " style="--i:8" x="330" y="252" text-anchor="end">₹</text><circle class="dr ln" style="--i:9" pathLength="1" cx="450" cy="120" r="56"/><path class="dr ln br th" style="--i:10" pathLength="1" d="M450 64A56 56 0 0 1 497 148"/><text class="tx fd " style="--i:11" x="450" y="126" text-anchor="middle">%</text><g class="fd " style="--i:12"><circle cx="70" cy="50" r="13" class="ln"/><text class="tx" x="70" y="55" text-anchor="middle">A</text></g><g class="fd " style="--i:13"><circle cx="350" cy="50" r="13" class="ln"/><text class="tx" x="350" y="55" text-anchor="middle">B</text></g></svg></div><div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><b>Cost estimator</b></nav><div class="head2"><h1>Interactive construction cost estimator</h1><p class="lead">Estimate your residential or commercial project costs in real time. Adjust your ground floor area, choose the number of floors, select your package, and review the itemized engineering BOQ.</p></div></div></section>
 <section class="fs st" id="est">
   <div class="wrap est">
@@ -82,7 +82,7 @@
         </div>
       </div>
     </div>
-    <aside class="res" aria-label="Estimate">
+    <aside class="res" id="resPanel" aria-label="Estimate">
       <div class="res-b">
         <div class="rh"><div><small>Project cost estimate</small><b id="r-area">2,400 sq ft total (G+1 floor)</b><span id="r-pkg">Premium Turnkey package</span></div><span class="stdchip">IS 456 standard</span></div>
         <div class="elev" id="r-elev" aria-hidden="true"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" focusable="false"><line x1="40" y1="138" x2="260" y2="138" stroke="#D2A85A" stroke-width="2"/><g class="fl" data-f="0"><rect x="90" y="112" width="120" height="26" fill="rgba(230,224,211,.07)" stroke="#E6E0D3" stroke-width="1.2"/><rect x="102" y="119" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="139" y="119" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="176" y="119" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="84" y="108" width="132" height="4" fill="#D2A85A"/></g><g class="fl" data-f="1"><rect x="90" y="84" width="120" height="26" fill="rgba(230,224,211,.07)" stroke="#E6E0D3" stroke-width="1.2"/><rect x="102" y="91" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="139" y="91" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="176" y="91" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="84" y="80" width="132" height="4" fill="#D2A85A"/></g><g class="fl" data-f="2"><rect x="90" y="56" width="120" height="26" fill="rgba(230,224,211,.07)" stroke="#E6E0D3" stroke-width="1.2"/><rect x="102" y="63" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="139" y="63" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="176" y="63" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="84" y="52" width="132" height="4" fill="#D2A85A"/></g><g class="fl" data-f="3"><rect x="90" y="28" width="120" height="26" fill="rgba(230,224,211,.07)" stroke="#E6E0D3" stroke-width="1.2"/><rect x="102" y="35" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="139" y="35" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="176" y="35" width="22" height="12" fill="none" stroke="#E6E0D3" stroke-width="1" opacity=".7"/><rect x="84" y="24" width="132" height="4" fill="#D2A85A"/></g></svg></div>
@@ -96,6 +96,7 @@
       </div>
     </aside>
   </div>
+  <div class="mtotal"><span>Estimated total</span><output id="m-total">₹48,00,000</output><a href="#resPanel">View breakdown</a></div>
 </section>
 </main>
 <footer class="foot">
