@@ -332,6 +332,10 @@ a{color:inherit}
 @media (min-width:861px){
   .pz-80{zoom:.8}.pz-75{zoom:.75}
   .pz-80 .wrap{max-width:1600px}.pz-75 .wrap{max-width:1700px}
+  .pz-80 .phero{zoom:1.25}
+  .pz-80 .phero .wrap{max-width:1280px}
+  .pz-75 .phero{zoom:1.3334}
+  .pz-75 .phero .wrap{max-width:1280px}
   #est{zoom:.92}
 }
 .phero.psm h1{font-size:clamp(36px,5vw,76px);line-height:.96}
