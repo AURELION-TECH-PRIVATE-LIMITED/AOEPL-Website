@@ -1,11 +1,10 @@
 // Receives the contact form's enquiry and emails it via Resend.
 // Requires the RESEND_API_KEY environment variable (set in the Netlify
-// dashboard, never committed). Optional RESEND_FROM overrides the sender
-// once a domain is verified in Resend; until then it falls back to
-// Resend's shared test sender, which can only deliver to your own
-// Resend account email.
+// dashboard, never committed). RESEND_FROM can override the sender if
+// needed; artofengineering.in is already verified in Resend, so this
+// defaults to an address on that domain.
 var TO = 'mail.aoepl@gmail.com'; // keep in sync with CONTACT.email in assets/site.js
-var FROM = process.env.RESEND_FROM || 'Art of Engineering <onboarding@resend.dev>';
+var FROM = process.env.RESEND_FROM || 'Art of Engineering <enquiries@artofengineering.in>';
 
 exports.handler = async function (event) {
   if (event.httpMethod !== 'POST') {
