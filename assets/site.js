@@ -36,6 +36,13 @@ if(menuBtn){
   menuBtn.addEventListener('click',function(){setMenu(!mnav.classList.contains('open'));});
   $$('#mnav a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){setMenu(false);}});
+  document.addEventListener('click',function(e){
+    if(mnav.classList.contains('open')&&!mnav.contains(e.target)&&e.target!==menuBtn){
+      setMenu(false);
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  },true);
 }
 
 /* ---------- services: tabs that cycle as you scroll ---------- */
